@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <style> .table th, .table td { vertical-align: middle; } .container { text-align: center; } table { margin-left: auto; margin-right: auto; } </style>    
+    <title>Counter</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Welcome to the Counter App</h1>
+        <h2>You have visited this page {{ counter }} times.</h2>
+        <form action="/add_one" method="POST">
+            <input type="hidden" name="increment_by" value="1">
+            <button type="submit" class="btn btn-primary">+2</button>
+        </form>
+
+        <form action="/add_one" method="POST" class="mt-3">
+            <div class="form-group">
+                <label for="add_number">Add a number:</label>
+                <input type="number" name="increment_by" id="add_number" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success">Increment Counter</button>
+        </form>
+        <a href="/reset" class="btn btn-danger mt-3">Reset Counter</a>
+    </div>
+    
+</body>
+</html>

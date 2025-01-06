@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5" style="border:1px solid #070707;">
+        <h1 class="text-center">Submitted Information</h1>
+        <div class="mt-4">
+            <p><strong>Name:</strong> {{ session['name'] }}</p>
+            <p><strong>Dojo Location:</strong> {{ session['location'] }}</p>
+            <p><strong>Favorite Language:</strong> {{ session['language'] }}</p>
+            <p><strong>Comments:</strong> {{ session['comments'] }}</p>
+        </div>
+        <div class="text-center mt-3" class="form-group text-right">
+            <a href="/" class="btn btn-secondary">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
